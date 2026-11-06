@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سامانه جامع رزرو و خدمات</title>
+    
+    <!-- تگ‌های ردیابی یکتا‌نت -->
+    <meta name="yn-tag" id="59651a56-9627-4c0a-9ad9-f6a0131cf33d">
+    <meta name="yn-tag" id="fa12cf8a-34bb-42fc-bfbb-3b33ebb2c9af">
+    <meta name="yn-tag" id="223cdbb5-4533-470c-a468-0758a4acdaee">
+    <meta name="yn-tag" id="fa13b82d-6824-4ac0-a037-eaf917b24d76">
+    <meta name="yn-tag" id="67c41492-57db-430c-9c6c-e4900e58dab3">
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, Arial, sans-serif; }
+        body { background-color: #f0f2f5; color: #333; padding: 20px; display: flex; justify-content: center; }
+        .container { width: 100%; max-width: 480px; background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h1 { text-align: center; font-size: 20px; margin-bottom: 8px; color: #1a73e8; }
+        p.subtitle { text-align: center; font-size: 13px; color: #666; margin-bottom: 24px; }
+        .category-title { font-size: 14px; font-weight: bold; margin: 16px 0 8px 0; color: #444; border-right: 3px solid #1a73e8; padding-right: 8px; }
+        .btn { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 14px 16px; margin-bottom: 10px; background: #f8f9fa; border: 1px solid #dadce0; border-radius: 10px; text-decoration: none; color: #202124; font-size: 14px; font-weight: bold; transition: 0.2s; }
+        .btn:hover { background: #e8f0fe; border-color: #1a73e8; color: #1a73e8; }
+        .footer { text-align: center; font-size: 11px; color: #888; margin-top: 24px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>سامانه خدمات هوشمند</h1>
+    <p class="subtitle">لطفاً خدمت مورد نظر خود را انتخاب کنید</p>
+
+    <div class="category-title">سینما و تفریح</div>
+    <a href="https://www.cinematicket.org" target="_blank" class="btn" onclick="trackClick('Cinema', 'Cinematicket')">
+        <span>🎬 خرید بلیت سینما</span>
+        <span>‹</span>
+    </a>
+
+    <div class="category-title">ورزش و سالن</div>
+    <a href="https://asanvarzesh.com" target="_blank" class="btn" onclick="trackClick('Sport_Salon', 'AsanVarzesh')">
+        <span>⚽ رزرو سالن فوتسال و ورزشی</span>
+        <span>‹</span>
+    </a>
+
+    <div class="category-title">سفر و حمل و نقل</div>
+    <a href="https://mrbilit.com" target="_blank" class="btn" onclick="trackClick('Bus_Ticket', 'MrBilit')">
+        <span>🚌 خرید بلیت سفر (مستر بلیط)</span>
+        <span>‹</span>
+    </a>
+
+    <div class="category-title">سلامت و درمان</div>
+    <a href="https://doctoreto.com" target="_blank" class="btn" onclick="trackClick('Doctor_Booking', 'Doctoreto')">
+        <span>🩺 نوبت‌دهی و مشاوره پزشکان (دکترتو)</span>
+        <span>‹</span>
+    </a>
+
+    <div class="footer">طراحی شده برای تست بازار و ثبت درخواست‌ها</div>
+</div>
+
+<script>
+    function trackClick(serviceName, label) {
+        // تابع ثبت آمار کلیک (در صورت نیاز به اتصال به اسکریپت‌های تحلیلی دیگر)
+        console.log('Clicked on: ' + serviceName + ' - ' + label);
+    }
+</script>
+
+</body>
+</html>

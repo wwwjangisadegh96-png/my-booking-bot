@@ -8,12 +8,12 @@ app = Flask(name)
 TOKEN = os.environ.get("BALE_TOKEN")
 BASE_URL = f"https://tapi.bale.ai/bot{TOKEN}"
 
-# 🌐 آدرس سایت خود در گیت‌هاب پیجز را اینجا وارد کنید
-GITHUB_PAGE_URL = "https://github.com/wwwjangisadegh96-png/my-booking-bot"
+# 🌐 آدرس سایت شما در گیت‌هاب پیجز (لینک نهایی که گیت‌هاب به شما می‌دهد)
+GITHUB_PAGE_URL = "https://wwwjangisadegh96-png.github.io/my-booking-bot/"
 
 @app.route("/", methods=["GET"])
 def home():
-    return "Bale Bot is running!", 200
+    return "Bale Bot and Website are running!", 200
 
 @app.route(f"/webhook/{TOKEN}", methods=["POST"])
 def webhook():

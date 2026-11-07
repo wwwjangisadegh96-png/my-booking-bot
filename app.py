@@ -13,12 +13,11 @@ GITHUB_PAGE_URL = "https://wwwjangisadegh96-png.github.io/my-booking-bot/"
 
 @app.route("/", methods=["GET"])
 def home():
-    return "Bale Bot and Website are running!", 200
+    return "Bot is running!"
 
 @app.route(f"/webhook/{TOKEN}", methods=["POST"])
 def webhook():
     data = request.get_json()
-    
     if data and "message" in data:
         chat_id = data["message"]["chat"]["id"]
         text = data["message"].get("text", "")
@@ -27,11 +26,10 @@ def webhook():
         if text == "/start":
             send_welcome_message(chat_id)
             
-    return "OK", 200
+    return {"status": "ok"}
 
 def send_welcome_message(chat_id):
     url = f"{BASE_URL}/sendMessage"
-    
     payload = {
         "chat_id": chat_id,
         "text": "سلام! 👋\nبرای ورود به سایت، روی دکمه زیر کلیک کنید:",
@@ -46,7 +44,6 @@ def send_welcome_message(chat_id):
             ]
         }
     }
-    
     requests.post(url, json=payload)
 
 if name == "main":
